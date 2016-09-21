@@ -1,0 +1,27 @@
+{
+    "name": "bluora/laravel-couch-client",
+    "description": "Laravel wrapper around Doctrine Couch Client.",
+    "keywords": ["bluora", "api", "php", "traits"],
+    "homepage": "https://github.com/bluora/laravel-couch-client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rocco Howard",
+            "email": "rocco@bluora.com.au"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+         "bluora/bluora-shared-api-traits": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*",
+        "codeclimate/php-test-reporter": "dev-master",
+        "phpmd/phpmd" : "@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bluora\\LaravelCouchClient\\": "src/"
+        }
+    }
+}
