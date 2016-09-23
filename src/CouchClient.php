@@ -14,14 +14,38 @@ class CouchClient extends CouchDBClient
      */
     private $couch_db_client;
 
+    /**
+     * Database to use.
+     *
+     * @var string
+     */
     protected $database = '';
 
+    /**
+     * Configuration source.
+     *
+     * @var string
+     */
     protected $config_name = '';
 
+    /**
+     * Template defaults for model.
+     *
+     * @var array
+     */
     protected $template = [];
 
+    /**
+     * Date fields and formats.
+     *
+     * @var array
+     */
     protected $date_fields = [];
 
+    /**
+     * Value fields and formats.
+     * @var array
+     */
     protected $value_fields = [];
 
     /**
@@ -62,6 +86,13 @@ class CouchClient extends CouchDBClient
         return $this;
     }
 
+    /**
+     * Process dates against the model.
+     *
+     * @param  Model $model
+     *
+     * @return void
+     */
     public function dates($model)
     {
         // Date value allocation
@@ -72,6 +103,13 @@ class CouchClient extends CouchDBClient
         }
     }
 
+    /**
+     * Process values against the model.
+     *
+     * @param  Model $model
+     *
+     * @return void
+     */
     public function values($model)
     {
         // Date value allocation
