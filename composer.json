@@ -13,7 +13,8 @@
     "require": {
         "php": ">=5.5.0",
         "bluora/bluora-shared-api-traits": "dev-master",
-        "doctrine/couchdb": "^1.0@beta"
+        "doctrine/couchdb": "^1.0@beta",
+	"diff/diff": "2.*"
     },
     "require-dev": {
         "phpunit/phpunit": "4.*",
