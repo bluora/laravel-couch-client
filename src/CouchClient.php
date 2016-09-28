@@ -129,7 +129,7 @@ class CouchClient
             // The error message that was returned means we don't have a database.
             // Let's create it and return null as this record won't exist.
             if ($result->body['error'] === 'not_found'
-                && $result->body['reason'] === 'Database does not exist.') {
+                && in_array($result->body['reason'], ['Database does not exist.', 'no_db_file'])) {
                 $this->couch_db_client->createDatabase($this->database);
 
                 return null;
