@@ -350,7 +350,7 @@ class CouchClient
         $client = new Guzzle();
 
         foreach ($attachments as $filename => $details) {
-            if (file_exists($details['file_path'])) {
+            if (!file_exists($details['file_path'])) {
                 continue;
             }
             try {
