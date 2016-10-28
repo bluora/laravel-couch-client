@@ -130,6 +130,20 @@ class CouchClient
         $this->related_record_id = $related_record_id;
     }
 
+
+    /**
+     * Change database and update the connection.
+     *
+     * @param string $database
+     *
+     * @return void
+     */
+    public function changeDatabase($database)
+    {
+        $this->database = $database;
+        $this->connect();
+    }
+
     /**
      * Make the call to the parent wrapper.
      *
