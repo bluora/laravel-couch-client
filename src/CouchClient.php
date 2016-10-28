@@ -45,6 +45,13 @@ class CouchClient
     protected $config_name = 'default';
 
     /**
+     * Related record id.
+     *
+     * @var string
+     */
+    protected $related_record_id = 0;
+
+    /**
      * Template defaults for model.
      *
      * @var array
@@ -109,6 +116,18 @@ class CouchClient
         $this->couch_db_client = CouchDBClient::create($this->config);
         $this->base_url = sprintf('%s://%s:%s/%s', $this->config['scheme'], $this->config['host'], $this->config['port'], $this->database);
         return $this;
+    }
+
+    /**
+     * Set a related record id.
+     *
+     * @param integer $related_record_id
+     *
+     * @return void
+     */
+    public function setRelatedRecordId($related_record_id)
+    {
+        $this->related_record_id = $related_record_id;
     }
 
     /**
